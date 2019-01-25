@@ -1,0 +1,150 @@
+<body style="padding-top: 65px;">
+    
+<div class="row">
+  <div class="px-2"></div>
+  <div class="col-2 py-3 col-md-auto" style="width: 300px;">
+      <nav id="content" class="navbar-light bg-light position-fixed">
+          
+        <a class="navbar-brand px-3" href="#">Table of Contents</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#contentDropDown" aria-controls="contentDropDown" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="nav-pills flex-column mr-auto collapse" id="contentDropDown">
+              <a class="nav-link" href="#item-1">General Notes</a>
+              <a class="nav-link" href="#item-2">Tabs</a>
+              <a class="nav-link" href="#item-3">Model Display</a>
+              <a class="nav-link" href="#item-4">Settings</a>
+              <a class="nav-link" href="#item-5">Administration</a>
+          </div>
+          
+        </nav>
+  </div>
+  <div class="col-8 py-3 col-md">
+      <body data-spy="scroll" data-target="#content" data-offset="0">
+          <h4 id="item-1">General Notes</h4>
+          <h5 id="item-1-1">Browser Versions Supported</h5>
+          <div>
+              <p>TESLAWeb has been designed to work on a variety of modern Internet Browsers 
+                  (Chrome, Firefox, Safari, Internet Explorer 8* and onwards, Apple and Android tablets), 
+                  however it's recommended to use the most recent version of Internet browser that you have access to. 
+                  Not only are they more secure, but are able to process JavaScript (code that runs within your web browser rather than on the server) 
+                  much more quickly. TESLAWeb relies heavily on JavaScript to display information.</p>
+                  <p>
+                    You could try using the following links to download a newer browser version:
+                  </p>
+                  <ul>
+                    <li>Chrome</li>
+                    <li>Firefox</li>
+                    <li>Internet Explorer</li>
+                  </ul>
+                  <p>* TESLAWeb will work with Internet Explorer 8, but you may see performance issues when rendering the data. We suggest only displaying a day or two of information at a time.</p>
+          </div>
+          <h5 id="item-1-2">Browser Features Supported</h5>
+          <div>
+            <p>TESLAWeb supports 'zooming' in your browser. I.e. if you'd like to see more at once, Hold down Ctrl and scroll your mouse wheel down (or press the '-' key) to zoom out. Scroll your mouse wheel back up (or press '+') to zoom back in. This will shrink up font sizes and scale the web page accordingly.</p>
+            <p>On tablets, you can scroll around the spreadsheet simply by dragging your finger around on the spreadsheet itself. The graph display also supports pinch to zoom.</p>
+          </div>
+          <h4 id="item-2">Tabs</h4>
+          <div>
+            <p>There are several ways to explore your forecast by selecting the different tabs in the main display. Depending on what model view you have selected (see below), certain tabs may be hidden. I.e. when you choose 'Customer Numbers' view, you won't see the 'Graph' tab.</p>
+            <p><b>Spreadsheet</b> - Shows a spreadsheet view of the data. Highlighting of min and max values can be toggled in the Settings section.</p>
+            <p><b>Graph</b> - Shows a graph/chart, allowing you to graphically see information. The graph can be zoomed in by dragging a rectangle, or pinching in to zoom on a tablet. Also note that by clicking on the different series in the graphs legend, you can temporary toggle hiding the series that are displayed on the graph. The graph can also be printed or exported in a variety of ways, simply click on the three bars in the top right corner.</p>
+            <p><b>Dual Display</b> - For larger displays, it may be more useful to see the spreadsheet and graph beside each other at the same time. Select this tab to enable that.</p>
+            <p><b>Statistics</b> - When 'Baseline Forecast' view is selected, this tab will show statistics about the model.</p>
+          </div>
+          <h4 id="item-3">Model Display</h4>
+          <div><p>The Model Display page allows you to view your TESLA model, in a variety of ways if the model supports the views, e.g. the Baseline Forecast, Comparable Days (US only), Temperature Steps, Customer Numbers and Weather Decomposition.</p></div>
+          <h5 id="item-3-1">Model Selection</h5>
+          <div>
+              <p>The model section allows you to select the model you're interested in viewing and the type of view on that model.</p>
+              <p><b>Selecting a model</b></p>
+              <p>Click the downwards pointing arrow to the right of the current model name to see a list of models. If you have many models, you can start typing to filter the view. Click on the model name to select it.</p>
+              <p><b>Types of model views</b></p>
+              <p><span class="badge badge-info">Note</span> The different views on the data may not be available if the underlying data isn't there.</p>
+              <ul>
+                  <li>
+                      <b>Baseline Forecast</b> - Displays the TESLA forecast for the selected model, as well as any observed load values and any selected historical forecast. In Spreadsheet view you can display the associated weather variables, such as temperature, humidity, etc. You can toggle to a temperature only view in the 'Spreadsheet Options' section.
+                  </li>
+                  <li>
+                      <b>Comparable Days </b>- Retrieves load and weather data for the five days most closely resembling the selected day. The Comparable Days section will also be displayed where you can alter the criteria you want the search algorithm to use if necessary.
+                  </li>
+                  <li>
+                      <b>Temperature Sensitivity</b> - Allows you to display 'quick scenarios', where you can view the effect that varying the temperature variable only has on the TESLA forecast. Select checkboxes in the 'Temperature Steps' section to view the different forecasts. You can view a spreadsheet or graph view of the forecasts.
+                  </li>
+                  <li>
+                      <b>Customer Numbers</b> - A spreadsheet only view of the customer numbers that the TESLA system used when producing the forecast.
+                  </li>
+                  <li>
+                      <b>Weather Decomposition</b> - Weather effects decomposition  consists of comparing the load experienced under actual or forecast weather with what would occur under some alternative weather conditions (generally, seasonal norms), and further decomposing the difference into that portion due to the individual effects of the differences in temperature, humidity, cloud cover, wind, precipitation, and the interaction among these weather variables.
+                  </li>
+              </ul>
+              <p><b>Stage 2</b></p>
+              <p>When unticked, the Stage 1 evaluation is displayed. This is the model output made without use of the most recent observed load information and is roughly equivalent to model error two or more days ahead.  When ticked, the Stage2 evaluation is displayed, where the system is allowed access to the most recent load data. This reduces model error, especially over the next few hours and up to 48 hours ahead.</p>
+          </div>
+          <h5 id="item-3-2">Date Selection</h5>
+          <div>
+              <p> Allows you to select the date and horizon (days to display) of interest. Also allows you to easily page through days/weeks</p>
+              <p><b>Days to Display (Horizon)</b></p>
+              <p>
+                  A pull down allowing you to adjust the number of days to display at once. Depending on the period of the data, the options will change to allow a larger horizon (i.e. with daily data).
+              </p>
+              <p><b>Date</b></p>
+              <p>
+                  Clicking the date control allows you to select any date quickly. You can type in a new date or select from the calendar control.
+              </p>
+              <p><span class="badge badge-info">Note</span> You are able to:</p>
+              <ul>
+                  <li>Page through months by clicking the arrows at the very top left and right of the control.</li>
+                  <li>Click the 'Today' button at any time to change the month display to the current month, where you'll see the current day highlighted. Note that you will then have to click on the highlighted date to display todays date.</li>
+              </ul>
+              <p><b>Paging buttons</b></p>
+              <p>
+                  Clicking the '&lt;&lt;' and '&gt;&gt;' buttons will page through weeks.
+              </p>
+              <p>
+                  Clicking the '&lt;' and '&gt;' buttons will page through days.
+              </p>
+          </div>
+          <h5 id="item-3-3">Historical Data Section</h5>
+          <div>
+              <p>
+                  If 'Baseline Forecast' is selected (in the 'Model' section) then the 'Historical Data' section will display. Allows you to bring up a TESLA forecast that was recently produced, such as the forecast for the current day made early in the morning, or the forecast produced yesterday (the '1 day ahead' option) at a certain time.
+              </p>
+              <p><b>Historic Load Forecast</b></p>
+              <p>
+                  Checking this box will bring up the historic forecast in both the Spreadsheet and Graph view, based on the selected day and time.
+              </p>
+              <p><b>Historic Weather Forecast</b></p>
+              <p>
+                  Checking this box will bring up the historic weather forecast in both the Spreadsheet and Graph view, based on the selected day and time.
+              </p>
+              <p><b>Date/Day Selection</b></p>
+              <p>
+                  Allows you to select the forecast that was made in the past. Selecting 'Intraday' will allow you to display a forecast that was produced in the current day. The other options allow you to select previous days. E.g. selecting '2 day ahead' will display the forecast made two days ago for the currently displayed date.
+              </p>
+              <p><b>Time Selection</b></p>
+              <p>
+                  You can type in a chosen time (if you are using TESLAWeb in a different timezone to the model, the time used in data retrieved will be in the same timezone that the model is in), or click the clock icon to allow you to page through hours and minutes.
+              </p>
+              <p><b>Historic Rolling Forecast</b></p>
+              <p>
+                  Checking this box will bring up Age of historic forecast values time selection. Select the time you'd like to display the historic rolling forecast for. This means that every historic rolling forecast value for every given time, will be the forecast that was produced for that time, X hours and minutes ago (X based on the Age of historic forecast values time selection). E.g. if Age of historic forecast values is set to 2 hours, then the forecast value at 10am will be the forecast value produced at or before 8am. For 11am it will be the forecast value produced at or before 9am, etc.
+              </p>
+              <p><span class="badge badge-info">Note</span> Click the Refresh button after changes have been made to update the display</p>
+          </div>
+          <h5 id="item-3-3">Comparable Days Section</h5>
+          <h4 id="item-4">Settings</h4>
+          <div>
+
+          </div>
+          <h4 id="item-5">Administration</h4>
+        </body>
+  </div>
+  <div class="px-2"></div>
+</div>
+</body>
+
+
+
+  
+  
